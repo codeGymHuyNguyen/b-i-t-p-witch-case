@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> ung dung tinh so ngay</title>
+</head>
+<body>
+
+    <input type="number" id="a" placeholder="nhập tháng">
+    <input type="button" onclick="ab()" value="tính số ngày" >
+<br> <span id="abc"></span>
+        <script>
+            function ab() {
+                let a = parseFloat(document.getElementById("a").value);
+                switch (a) {
+                    case 1 :
+                    case 3 :
+                    case 5 :
+                    case 7 :
+                    case 8 :
+                    case 10 :
+                    case 12 :
+                        document.getElementById("abc").innerText = "tháng" + a + "có 31 ngày"
+                        break;
+                    case 2:
+                        document.getElementById("abc").innerText = "tháng" + a + "có 28 hoặc 29 ngày"
+                        break;
+                    case 4 :
+                    case 6 :
+                    case 9 :
+                    case 11 :
+                        document.getElementById("abc").innerText = "tháng" + a + "tháng có 30 ngày"
+                        break;
+                    default: document.getElementById("abc").innerText = "không xác định"
+                }
+
+            }
+        </script>
+</body>
+</html>
